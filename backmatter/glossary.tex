@@ -1,0 +1,81 @@
+\chapter*{Glosario de Símbolos}
+\addcontentsline{toc}{chapter}{Glosario de Símbolos}
+
+\section*{Sets and Spaces}
+
+\begin{description}
+    \item[$\R$] Real numbers---the continuum of all possible scalar values
+    \item[$\R^d$] $d$-dimensional Euclidean space---vectors with $d$ components
+    \item[$\R^{m \times n}$] Space of $m \times n$ matrices
+    \item[$\mathbb{N}$] Natural numbers $\{0, 1, 2, \ldots\}$
+    \item[$\mathbb{Z}$] Integers $\{\ldots, -2, -1, 0, 1, 2, \ldots\}$
+    \item[$SO(3)$] Special orthogonal group---3D rotations
+\end{description}
+
+\section*{Linear Algebra}
+
+\begin{description}
+    \item[$\vect{x}$] Vector (boldface)---geometric object
+    \item[$x_j$] Component of vector (subscript $j$ = feature/dimension)
+    \item[$x^{(i)}$] Sample/instance (superscript $(i)$ = data point)
+    \item[$\mat{A}$] Matrix (boldface capital)---linear transformation
+    \item[$A_{ij}$] Matrix element (row $i$, column $j$)
+    \item[$\ten{T}$] Tensor (calligraphic)---multi-indexed array
+    \item[$\vect{x}^\top$] Transpose of vector
+    \item[$\langle \vect{x}, \vect{y} \rangle$] Inner product
+    \item[$\|\vect{x}\|$] Norm (length) of vector
+\end{description}
+
+\section*{Calculus and Operators}
+
+\begin{description}
+    \item[$\nabla f$] Gradient---direction of steepest ascent
+    \item[$\nabla \cdot \vect{F}$] Divergence---outflow of vector field
+    \item[$\nabla \times \vect{F}$] Curl---rotation of vector field
+    \item[$J_f(\vect{x})$] Jacobian matrix at $\vect{x}$
+    \item[$\frac{\partial f}{\partial x}$] Partial derivative
+    \item[$\int_S$] Integral over surface $S$
+    \item[$\oint_{\partial S}$] Line integral over boundary $\partial S$
+\end{description}
+
+\section*{Probability and Statistics}
+
+\begin{description}
+    \item[\ensuremath{\E[X]}] Expectation (mean) of random variable $X$
+    \item[\ensuremath{\Var[X]}] Variance of $X$
+    \item[\ensuremath{\Cov[X,Y]}] Covariance between $X$ and $Y$
+    \item[\ensuremath{\mu}] Mean (population or sample)
+    \item[$\sigma^2$] Variance
+    \item[$\mat{\Sigma}$] Covariance matrix
+    \item[$P(A \mid B)$] Conditional probability of $A$ given $B$
+    \item[$\mathcal{N}(\mu, \sigma^2)$] Normal (Gaussian) distribution
+    \item[$\pi(a \mid s)$] Policy---probability of action $a$ in state $s$
+\end{description}
+
+\section*{Machine Learning}
+
+\begin{description}
+    \item[$Q, K, V$] Query, Key, Value matrices (attention mechanism)
+    \item[$W$] Weight matrix
+    \item[$\softmax(z)$] Softmax function: $\frac{e^{z_i}}{\sum_j e^{z_j}}$
+    \item[$\argmax_x f(x)$] Value of $x$ that maximizes $f(x)$
+    \item[$\argmin_x f(x)$] Value of $x$ that minimizes $f(x)$
+\end{description}
+
+\section*{Reinforcement Learning}
+
+\begin{description}
+    \item[$V^\pi(s)$] State-value function under policy $\pi$
+    \item[$Q^\pi(s,a)$] Action-value function
+    \item[$\gamma$] Discount factor
+    \item[$r$] Reward
+    \item[$P(s' \mid s, a)$] Transition probability
+\end{description}
+
+\section*{Custom Philosophical Notations}
+
+\begin{description}
+    \item[$\phigrad f$] Philosophical gradient (cyclic flow)
+    \item[$\philcurl \times \vect{F}$] Intuitive curl (rotational twists)
+    \item[\ensuremath{\existE[X]}] Existential expectation (being-in-uncertainty)
+\end{description}

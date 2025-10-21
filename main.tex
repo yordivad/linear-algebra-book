@@ -1,0 +1,60 @@
+\documentclass[11pt,openright,twoside]{book}
+
+% Load preamble with all packages and custom commands
+\input{preamble}
+
+% Document metadata
+\title{Philosophical Intuitions in Mathematical Notation}
+\subtitle{A Vision for Machine Learning, Perception, and Dynamics}
+\author{MIT Research Fellow}
+\date{\today}
+
+\begin{document}
+
+% Front Matter
+\frontmatter
+\input{frontmatter/titlepage}
+\input{frontmatter/dedication}
+\tableofcontents
+\input{frontmatter/preface}
+
+% Main Content
+\mainmatter{}
+
+% Part I: Mathematical foundations
+\part{Mathematical Foundations and Notation\\
+	\large Philosophical Foundations of Notation and Intuition}
+\input{chapters/part1_foundations}
+
+% Part II: Statistics and probability
+\part{Statistics, Probability, and Stochastic Processes\\
+	\large Intuitions about Uncertainty and Dynamics}
+\input{chapters/part2_statistics}
+
+% Part III: Computer vision
+\part{Computer Vision: 2D and 3D\\
+	\large Visual Intuitions and Geometric Philosophy}
+\input{chapters/part3_vision}
+
+% Part IV: Unsupervised learning
+\part{Unsupervised Learning and Dimensionality Reduction\\
+	\large Clustering Intuitions and Emergence}
+\input{chapters/part4_clustering}
+
+% Part V: Reinforcement learning
+\part{Reinforcement Learning\\
+	\large Dynamic Intuitions of Agency and Decision-making}
+\input{chapters/part5_rl}
+
+% Part VI: Vector calculus and physics
+\part{Vector Calculus and Maxwell's Equations\\
+	\large Philosophical Extensions to Physical Intuition}
+\input{chapters/part6_vector_calculus}
+
+% Back Matter
+\backmatter{}
+\input{backmatter/glossary}
+% Use biblatex + biber (added \addbibresource in preamble)
+\printbibliography{}
+
+\end{document}

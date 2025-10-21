@@ -1,0 +1,258 @@
+% ============================================
+% PREAMBLE: Modern MIT-style LaTeX Setup
+% ============================================
+
+% Encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,main=english,shorthands=off]{babel}
+
+% Math and symbols
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{physics}
+\usepackage{bm}
+\usepackage{microtype}
+
+% Fonts: EB Garamond + NewTX Math (modern serif)
+\usepackage[osf]{ebgaramond} % Elegant text font
+\usepackage{newtxmath} % Matching math font
+\usepackage[scaled=0.85]{beramono} % Monospaced font for code
+
+% Spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Lists
+\usepackage{enumitem}
+
+% Quotation handling
+\usepackage{csquotes}
+
+% Page layout
+\usepackage[
+  paperwidth=7in,
+  paperheight=10in,
+  margin=1in,
+  includehead,
+  includefoot
+]{geometry}
+
+% Colors
+\usepackage{xcolor}
+\definecolor{mitred}{RGB}{163,31,52}
+\definecolor{notationblue}{RGB}{0,84,159}
+\definecolor{philosophygray}{RGB}{100,100,100}
+\definecolor{codegreen}{RGB}{0,128,0}
+\definecolor{codepurple}{RGB}{153,0,153}
+
+% Graphics and TikZ
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows.meta,
+  positioning,
+  shapes.geometric,
+  calc,
+  decorations.pathmorphing,
+  decorations.markings,
+  matrix,
+  patterns,
+  3d
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Listings
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{codepurple}\bfseries,
+  commentstyle=\color{codegreen}\itshape,
+  stringstyle=\color{mitred},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=8pt,
+  backgroundcolor=\color{gray!5},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=single,
+  rulecolor=\color{gray!30},
+  tabsize=2,
+  captionpos=b,
+  breaklines=true,
+  breakatwhitespace=false,
+  escapeinside={(*@}{@*)},
+  language=Python,
+  inputencoding=utf8,
+  extendedchars=true
+}
+
+% Algorithms
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=mitred,
+  citecolor=notationblue,
+  urlcolor=notationblue,
+  bookmarksnumbered=true,
+  pdfstartview=FitH
+}
+
+% Theorem environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{notation}[definition]{Notation}
+\newtheorem{example}[definition]{Example}
+\newtheorem{exercise}{Exercise}[chapter]
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{philosophical}[definition]{Philosophical Intuition}
+\newtheorem{derivation}[definition]{Derivation}
+
+% Custom boxes
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{seanbox}[1]{
+  colback=notationblue!5,
+  colframe=notationblue,
+  fonttitle=\bfseries\sffamily,
+  title={Sean #1: Notational Definition},
+  enhanced,
+  attach boxed title to top left={yshift=-2mm, xshift=5mm},
+  boxed title style={colback=notationblue}
+}
+
+\newtcolorbox{philobox}[1][]{
+  colback=philosophygray!5,
+  colframe=philosophygray,
+  fonttitle=\bfseries\itshape,
+  title={Philosophical Reflection},
+  enhanced,
+  #1
+}
+
+\newtcolorbox{codebox}[1][]{
+  colback=codegreen!5,
+  colframe=codegreen!70!black,
+  fonttitle=\bfseries\ttfamily,
+  title={Code Bridge: Manifesting Abstract Ideas},
+  enhanced,
+  #1
+}
+
+\newtcolorbox{visualbox}[1][]{
+  colback=mitred!5,
+  colframe=mitred,
+  fonttitle=\bfseries,
+  title={Visual Intuition},
+  enhanced,
+  #1
+}
+
+\newtcolorbox{dualitybox}[1][]{
+  colback=notationblue!3,
+  colframe=notationblue!80!black,
+  title={Duality Box},
+  sharp corners,
+  enhanced,
+  fonttitle=\bfseries,
+  #1
+}
+
+\newtcolorbox{intuitionbox}[1][]{
+  colback=philosophygray!3,
+  colframe=philosophygray!80!black,
+  title={Intuition},
+  enhanced,
+  fonttitle=\itshape\bfseries,
+  #1
+}
+
+\newtcolorbox{mlbox}[1][]{
+  colback=codegreen!4,
+  colframe=codegreen!80!black,
+  title={Machine Learning Note},
+  enhanced,
+  fonttitle=\bfseries\ttfamily,
+  #1
+}
+
+\newtcolorbox{necessitybox}[1][]{
+  colback=mitred!3,
+  colframe=mitred!80!black,
+  title={Necessity},
+  enhanced,
+  fonttitle=\bfseries,
+  #1
+}
+
+\newtcolorbox{notationbox}[1][]{
+  colback=notationblue!2,
+  colframe=notationblue!70!black,
+  title={Notation},
+  enhanced,
+  fonttitle=\bfseries,
+  #1
+}
+
+% Custom math commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\vect}[1]{\bm{#1}}
+\newcommand{\mat}[1]{\bm{#1}}
+\providecommand{\matr}[1]{\mat{#1}}
+\newcommand{\ten}[1]{\mathcal{#1}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\sgn}{sgn}
+\providecommand{\tr}{\operatorname{tr}}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\softmax}{softmax}
+
+% Special notations
+\newcommand{\phigrad}{\nabla^{\circ}}
+\newcommand{\philcurl}{\nabla^{\times}}
+\newcommand{\existE}{\mathbb{E}^{\exists}}
+
+% Subtitle fallback
+\providecommand{\subtitle}[1]{\gdef\thesubtitle{#1}}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\slshape\nouppercase{\leftmark}}
+\fancyhead[RO]{\slshape\nouppercase{\rightmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{26pt}
+
+% Chapter formatting
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{mitred}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+
+% Bibliography
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{backmatter/bibliography.bib}

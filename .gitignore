@@ -1,0 +1,40 @@
+# LaTeX intermediate and output files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.xdv
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.ilg
+*.idx
+*.ind
+
+# PDFs and other generated artifacts
+*.pdf
+*.ps
+*.dvi
+
+# latexmk and build dirs
+_minted-* 
+build/
+latex.out
+
+# Editor and system files
+.DS_Store
+Thumbs.db
+*.swp
+__pycache__/
+.vscode/
+
+# Bibliography tool files
+*.bib.backup
