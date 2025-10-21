@@ -14,10 +14,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install TeX Live packages
+    - name: Install TeX Live (full)
       run: |
         sudo apt-get update
-        sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra biber
+        # Install a full TeX Live to ensure all CTAN packages (e.g. physics.sty) are available.
+        # This is larger and will increase CI runtime but avoids missing-package failures.
+        sudo apt-get install -y latexmk texlive-full biber
 
     - name: Build PDF with latexmk
       working-directory: ${{ github.workspace }}
